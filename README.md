@@ -1,5 +1,5 @@
 # sbsTC
-[![PyPI version]()]()
+[![PyPI version](https://badge.fury.io/py/sbsTC.svg)](https://pypi.org/project/sbsTC/)
 
 ## Descripción
 Obten el tipo de cambio oficial de la SBS (Perú). sbsTC es una libreria escrita en Python 3.11 que permite obtener de manera rápida y sencilla el tipo de cambio por día o rango de días.
