@@ -2,3 +2,5 @@ sbsTCenv
 __pycache__
 test.py
 test.ipynb
+dist
+*-info
