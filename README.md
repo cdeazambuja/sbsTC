@@ -1,5 +1,6 @@
 # sbsTC
-[![PyPI version](https://badge.fury.io/py/sbsTC.svg)](https://pypi.org/project/sbsTC/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11.5-blue.svg)](https://www.python.org/downloads/release/python-3115/)
+[![PyPI version](https://img.shields.io/badge/sbsTC-0.0.2-green.svg)](https://pypi.org/project/sbsTC/)
 
 ## Description
 Retrieves the official exchange rate for Peru within a specified date range from SBS. This library is written in Python 3.11
