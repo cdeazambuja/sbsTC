@@ -5,3 +5,4 @@ test.ipynb
 dist
 *-info
 *.pypirc
+build

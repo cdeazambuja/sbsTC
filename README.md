@@ -1,15 +1,15 @@
 # sbsTC
 [![PyPI version](https://badge.fury.io/py/sbsTC.svg)](https://pypi.org/project/sbsTC/)
 
-## Descripción
-Obten el tipo de cambio oficial de la SBS (Perú). sbsTC es una libreria escrita en Python 3.11 que permite obtener de manera rápida y sencilla el tipo de cambio por día o rango de días.
+## Description
+Retrieves the official exchange rate for Peru within a specified date range from SBS. This library is written in Python 3.11
 
-## Instalación
+## Installation
 ```
 pip install sbsTC
 ```
 
-## Uso básico
+## Basic Code
 ```python
 from sbsTC import SbsTC
 
@@ -18,7 +18,7 @@ data = tc.get_exchange('USD','25/09/2023','30/09/2023')
 print(data)
 ```
 
-### Obtendremos el siguiente resultado:
+### The following result is obtained:
 ```python
 {
     '25/09/2023': {'buy': '3.765', 'sell': '3.773'},
@@ -29,47 +29,47 @@ print(data)
 }
 ```
 
-## Configuración
-| Opción        | Descripción      | Predeterminado | Valores permitidos                         |
+## Settings
+| Option        | Description      | Default        | Allowed values                             |
 |:-------------:|:----------------:|:--------------:|:------------------------------------------:|
-| `date_format` | Formato de fecha | `%d/%m/%Y`     | [http://strftime.org](http://strftime.org) |
+| `date_format` | Date format      | `%d/%m/%Y`     | [http://strftime.org](http://strftime.org) |
 
-## Ejemplo
+## Example
 ```python
 from sbsTC import SbsTC
 tc = SbsTC(date_format='%Y-%m-%d')
 data = tc.get_exchange('USD','25/09/2023')
 print(data)
 ```
-### Se obtiene el siguiente resultado:
+### The following result is obtained:
 ```python
 {'2023-09-25': {'buy': '3.765', 'sell': '3.773'}}
 ```
 
-### En caso no encontrar información disponible:
+### If no information is found:
 ```python
 DataNotFound: No hay información disponible para el rango seleccionado
 ```
 
 
-## Divisas
-Listado de divisas permitidas
+## Currencies
+Permitted currencies:
 
-| Divisa           | Código |
+| Currency         | Code   |
 |:----------------:|:------:|
-| Dolar americano  | `USD`  |
+| American dollar  | `USD`  |
 | Euro             | `EUR`  |
-| Yen Japones      | `JPY`  |
-| Dolar canadiense | `CAD`  |
-| Corona Sueca     | `SEK`  |
-| Franco Suizo     | `CHF`  |
-| Libra esterlina  | `GBP`  |
+| Japan Yen        | `JPY`  |
+| Canadian dollar  | `CAD`  |
+| Swedish Krona    | `SEK`  |
+| Swiss Franc      | `CHF`  |
+| British Pound    | `GBP`  |
 
-## Métodos
+## Methods
 
 ### get_exchange(`currency`,`from_date`,`to_date=None`)
-Obtiene el tipo de cambio de la moneda enviada en base al rango de fecha ingresado. El resultado será un diccionario de tipos de cambio. ([https://docs.python.org/es/3/tutorial/datastructures.html#dictionaries](https://docs.python.org/es/3/tutorial/datastructures.html#dictionaries)).
+Obtains the currency exchange rate for the provided currency based on a given date range. The result will be a dictionary of exchange rates. ([https://docs.python.org/3/tutorial/datastructures.html#dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)).
 
-## Consideraciones
-* La información está disponible a partir del año 2000 en adelante.
-* El tipo de cambio obtenido está con corte al día anterior.
+## Considerations
+* The information is available from the year 2000 onwards.
+* The obtained exchange rate is as of the previous day.
